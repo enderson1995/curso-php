@@ -61,6 +61,13 @@
             <input type="url" name="url"/>
         </p>
 
+        <textarea name="" id="" cols="30" rows="10"></textarea></br>
+
+        Peliculas
+        <select name="peliculas" id="">
+            <option value="spiderman">Spideran</option>
+            <option value="harry:potter">harry potter</option>
+        </select>
 
         <input type="submit" value="enviar"/></br>
     </form>
