@@ -7,21 +7,39 @@
 </head>
 <body>
     <h1>Validar frmularios PHP</h1>
-    <form action="POST" action="procesar_formulario.php">
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre">
+    <?php
+        if(isset($_GET['error'])){
+            $error = $_GET['error'];
+            if($error == 'faltan valores'){
+                echo '<strong style="color:red;">Introduce todos los datos en el campo de formulario</strong>';
+            }else{
+                echo '<strong style="color:red;">'.$error.'</strong>';
+            }
+        }
+    ?>
 
-        <label for="Apellidos">Apellidos:</label>
-        <input type="text" name="Apellidos">
+    <form method="POST" action="procesar_formulario.php">
+        <label for="nombre">Nombre:</label></br>
+        <input type="text" name="nombre" pattern="[A-Za-z]+">
+        </br>
 
-        <label for="Edad">Edad:</label>
-        <input type="number" name="Edad">
+        <label for="apellido">Apellidos:</label></br>
+        <input type="text" name="apellido" required="required" pattern="[A-Za-z]+">
+        </br>
 
-        <label for="email">email:</label>
-        <input type="email" name="email">
+        <label for="edad">Edad:</label></br>
+        <input type="number" name="edad"  required="required" pattern="[0-9]+">
+        </br>
 
-        <label for="Password">Password:</label>
-        <input type="password" name="Password">
+        <label for="email">email:</label></br>
+        <input type="email" name="email" required="required">
+        </br>
+
+        <label for="password">Password:</label></br>
+        <input type="password" name="password" required="required">
+        </br>
+
+        <input type="submit" value="Enviar">
     </form>
 </body>
 </html>
