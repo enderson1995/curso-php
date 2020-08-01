@@ -1,0 +1,7 @@
+Logre escribir desde php
+el problema es que el archivo 
+no poseia ermisos de escrituraSoy un texto escrito desde php
+Soy un texto escrito desde php
+Soy un texto escrito desde php
+Soy un texto escrito desde php
+Soy un texto escrito desde php
