@@ -19,9 +19,14 @@ Tipos de datos:
 */
 
 CREATE TABLE usuarios(
-id          int(11),
-nombre      varchar(100),
-apellidos   varchar(255),
-email       varchar(100),
-password    varchar(250)
+/* 
+    nombre      tipo            restricciones
+*/
+    id          int(11)         auto_increment not null,/* Se incrementa solo y No puede ser nulo */
+    nombre      varchar(100)    not null,/* Puede ser nulo */
+    apellidos   varchar(255)    default'hola',/* por defecto asigna este valor al campo */
+    email       varchar(100)    not null, /* No puede ser nulo */
+    password    varchar(250),    
+
+    CONSTRAINT  pk_usuarios    PRIMARY KEY(id)
 );
